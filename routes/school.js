@@ -22,7 +22,7 @@ router.post('/addSchool', async (req, res) => {
   }
 });
 
-// GET /listSchools?lat=...&lon=...
+// GET
 router.get('/listSchools', async (req, res) => {
   const { lat, lon } = req.query;
 
@@ -36,7 +36,7 @@ router.get('/listSchools', async (req, res) => {
     const userLon = parseFloat(lon);
 
     const calculateDistance = (lat1, lon1, lat2, lon2) => {
-      const R = 6371; // km
+      const R = 6371;
       const dLat = (lat2 - lat1) * (Math.PI / 180);
       const dLon = (lon2 - lon1) * (Math.PI / 180);
       const a =
